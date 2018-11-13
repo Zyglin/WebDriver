@@ -24,18 +24,9 @@ namespace WebDriverTest
             var findFlight = driver.FindElement(By.XPath("//a[@data-bind='click : findFlights']"));
             findFlight.Click();
             var statusFlight = driver.FindElement(By.XPath("//div[@class='h4 img-align-right']"));
-            
-            if (statusFlight != null)
-            {
-
-                Assert.AreEqual("Минск (MSQ)", statusFlight.Text);
-            }
-else
-{
-	 Assert.AreEqual(null, statusFlight);
-
-}
-         
+            Assert.IsNotNull(statusFlight,"Рейс найден");
+		Assert.IsNull(statusFlight,"Ошибка");
+                   
         }
     }
 }

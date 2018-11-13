@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -28,8 +28,13 @@ namespace WebDriverTest
             if (statusFlight != null)
             {
 
-                Assert.AreEqual("–ú–∏–Ω—Å–∫ (MSQ)", statusFlight.Text);
+                Assert.AreEqual("ÃËÌÒÍ (MSQ)", statusFlight.Text);
             }
+else
+{
+	 Assert.AreEqual(null, statusFlight);
+
+}
          
         }
     }

@@ -24,7 +24,8 @@ namespace WebDriverTest
             var findFlight = driver.FindElement(By.XPath("//a[@data-bind='click : findFlights']"));
             findFlight.Click();
             var statusFlight = driver.FindElement(By.XPath("//div[@class='h4 img-align-right']"));
-            Assert.IsNotNull(statusFlight,"Рейс найден");
+            Assert.IsNotNull(statusFlight,"Here is no any data about flight");
+		Assert.areEquals("284",statusFlight,"flight status is incorrect");
                    
         }
     }

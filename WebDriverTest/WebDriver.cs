@@ -25,7 +25,6 @@ namespace WebDriverTest
             findFlight.Click();
             var statusFlight = driver.FindElement(By.XPath("//div[@class='h4 img-align-right']"));
             Assert.IsNotNull(statusFlight,"Рейс найден");
-		Assert.IsNull(statusFlight,"Ошибка");
                    
         }
     }
